@@ -1,11 +1,21 @@
+import { useParallax } from "@/hooks/use-parallax";
+
 export function Hero() {
+  const gridRef = useParallax<HTMLDivElement>(0.4);
+  const glowRef = useParallax<HTMLDivElement>(0.25);
+
   return (
     <section id="top" className="relative pt-40 pb-32 overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 bg-grid mask-fade-b opacity-60" aria-hidden />
-      {/* Radial glow */}
+      {/* Background grid — parallax */}
       <div
-        className="absolute inset-x-0 top-0 h-[600px] pointer-events-none"
+        ref={gridRef}
+        className="parallax absolute inset-0 bg-grid mask-fade-b opacity-60"
+        aria-hidden
+      />
+      {/* Radial glow — slower parallax */}
+      <div
+        ref={glowRef}
+        className="parallax absolute inset-x-0 top-0 h-[600px] pointer-events-none"
         style={{ background: "var(--gradient-radial)" }}
         aria-hidden
       />
