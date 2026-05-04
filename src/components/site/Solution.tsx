@@ -7,7 +7,7 @@ export function Solution() {
       <div className="relative mx-auto max-w-7xl px-6">
         <SectionLabel index="03" label="Solución" />
 
-        <div className="mt-8 max-w-3xl">
+        <div className="mt-8 max-w-3xl reveal">
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter leading-[1.05]">
             Un sistema que <span className="text-glow">opera por ti.</span>
           </h2>
@@ -17,7 +17,7 @@ export function Solution() {
           </p>
         </div>
 
-        <div className="mt-16 grid lg:grid-cols-3 gap-4">
+        <div className="mt-16 grid lg:grid-cols-3 gap-4" data-stagger="120">
           {[
             {
               t: "Sistema de automatización",
@@ -37,7 +37,7 @@ export function Solution() {
           ].map((c) => (
             <div
               key={c.t}
-              className="group relative rounded-2xl border border-hairline bg-surface/60 p-6 hover:bg-surface transition-all"
+              className="reveal group relative rounded-2xl border border-hairline bg-surface/60 p-6 hover:bg-surface transition-all"
             >
               <div className="h-10 w-10 rounded-lg border border-hairline bg-background flex items-center justify-center text-glow">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">

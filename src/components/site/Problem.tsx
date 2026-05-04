@@ -23,7 +23,7 @@ export function Problem() {
   return (
     <section className="relative py-32 border-t border-hairline">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
           <div>
             <SectionLabel index="02" label="Problema" />
             <h2 className="mt-6 font-display text-4xl sm:text-5xl font-semibold tracking-tighter max-w-2xl leading-[1.05]">
@@ -36,11 +36,14 @@ export function Problem() {
           </p>
         </div>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-hairline rounded-2xl border border-hairline overflow-hidden">
+        <div
+          className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-hairline rounded-2xl border border-hairline overflow-hidden"
+          data-stagger="100"
+        >
           {problems.map((p, i) => (
             <div
               key={p.k}
-              className="bg-background p-7 hover:bg-surface transition-colors group"
+              className="reveal bg-background p-7 hover:bg-surface transition-colors group"
             >
               <div className="font-mono text-xs text-muted-foreground">
                 0{i + 1}

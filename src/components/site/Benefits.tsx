@@ -12,15 +12,15 @@ export function Benefits() {
     <section className="relative py-32 border-t border-hairline">
       <div className="mx-auto max-w-7xl px-6">
         <SectionLabel index="06" label="Beneficios" />
-        <h2 className="mt-6 font-display text-4xl sm:text-5xl font-semibold tracking-tighter max-w-3xl leading-[1.05]">
+        <h2 className="reveal mt-6 font-display text-4xl sm:text-5xl font-semibold tracking-tighter max-w-3xl leading-[1.05]">
           Resultados que se ven en operaciones, equipo y P&amp;L.
         </h2>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4" data-stagger="100">
           {benefits.map((b) => (
             <div
               key={b.t}
-              className="rounded-2xl border border-hairline bg-surface/40 p-6 hover:border-foreground/20 transition-colors"
+              className="reveal rounded-2xl border border-hairline bg-surface/40 p-6 hover:border-foreground/20 transition-colors"
             >
               <div className="font-mono text-[10px] uppercase tracking-widest text-glow">
                 {b.v}
