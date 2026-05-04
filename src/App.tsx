@@ -32,7 +32,7 @@ function usePathname() {
 
 export default function App() {
   const path = usePathname();
-
+  useGlobalScrollReveal(path);
   if (path === "/privacidad" || path === "/privacy") {
     return (
       <>
