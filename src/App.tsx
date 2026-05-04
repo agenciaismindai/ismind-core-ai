@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useGlobalScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { Concept } from "@/components/site/Concept";
@@ -31,7 +32,7 @@ function usePathname() {
 
 export default function App() {
   const path = usePathname();
-
+  useGlobalScrollReveal(path);
   if (path === "/privacidad" || path === "/privacy") {
     return (
       <>

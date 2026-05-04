@@ -52,7 +52,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionLabel index="04" label="Cómo funciona" />
 
-        <div className="mt-6 max-w-3xl">
+        <div className="mt-6 max-w-3xl reveal">
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter leading-[1.02]">
             Así es como{" "}
             <span className="text-glow">trabajamos.</span>

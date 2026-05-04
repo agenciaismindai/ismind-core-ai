@@ -1,11 +1,16 @@
+import { useParallax } from "@/hooks/use-parallax";
+
 export function Concept() {
+  const cardRef = useParallax<HTMLDivElement>(0.15);
+
   return (
     <section id="concepto" className="relative py-32 border-t border-hairline">
       <div className="mx-auto max-w-7xl px-6">
         <SectionLabel index="01" label="Concepto" />
 
         <div className="mt-10 grid lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-7">
+          {/* Sticky text — stays anchored while right card drifts */}
+          <div className="lg:col-span-7 lg:sticky lg:top-32 self-start reveal">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter leading-[1.05]">
               Automatización de procesos con <span className="text-glow">IA</span> para tu negocio.
             </h2>
@@ -16,15 +21,18 @@ export function Concept() {
             </p>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl border border-hairline bg-surface/60 p-1">
-              <div className="rounded-xl bg-background p-6 space-y-4">
+          <div className="lg:col-span-5 lg:min-h-[60vh]">
+            <div
+              ref={cardRef}
+              className="parallax relative rounded-2xl border border-hairline bg-surface/60 p-1 reveal reveal-scale"
+            >
+              <div className="rounded-xl bg-background p-6 space-y-4" data-stagger="120">
                 {[
                   ["Capa de IA", "Agentes + automatizaciones"],
                   ["Tu negocio", "Personas, herramientas y datos"],
                   ["Operación", "Decisiones, ejecución, métricas"],
                 ].map(([t, s], i) => (
-                  <div key={t} className="flex items-start gap-4">
+                  <div key={t} className="reveal flex items-start gap-4">
                     <div className="font-mono text-xs text-muted-foreground pt-0.5 w-6">
                       0{i + 1}
                     </div>

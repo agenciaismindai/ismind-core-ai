@@ -32,15 +32,15 @@ export function UseCases() {
     <section id="casos" className="relative py-32 border-t border-hairline">
       <div className="mx-auto max-w-7xl px-6">
         <SectionLabel index="07" label="Casos de uso" />
-        <h2 className="mt-6 font-display text-4xl sm:text-5xl font-semibold tracking-tighter max-w-2xl leading-[1.05]">
+        <h2 className="reveal mt-6 font-display text-4xl sm:text-5xl font-semibold tracking-tighter max-w-2xl leading-[1.05]">
           Diseñado para negocios de servicios.
         </h2>
 
-        <div className="mt-16 grid lg:grid-cols-2 gap-4">
+        <div className="mt-16 grid lg:grid-cols-2 gap-4" data-stagger="120">
           {cases.map((c) => (
             <div
               key={c.t}
-              className="group relative rounded-2xl border border-hairline bg-surface/60 p-8 hover:bg-surface transition-all"
+              className="reveal group relative rounded-2xl border border-hairline bg-surface/60 p-8 hover:bg-surface transition-all"
             >
               <div className="flex items-start justify-between gap-6">
                 <div className="flex-1">

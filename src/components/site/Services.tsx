@@ -32,7 +32,7 @@ export function Services() {
     <section id="servicios" className="relative py-32 border-t border-hairline">
       <div className="mx-auto max-w-7xl px-6">
         <SectionLabel index="05" label="Producto" />
-        <div className="mt-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="mt-6 flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
           <h2 className="font-display text-4xl sm:text-5xl font-semibold tracking-tighter max-w-2xl leading-[1.05]">
             Cuatro módulos. Una sola infraestructura.
           </h2>
@@ -41,11 +41,11 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-4">
+        <div className="mt-16 grid md:grid-cols-2 gap-4" data-stagger="120">
           {services.map((s) => (
             <div
               key={s.t}
-              className="group relative rounded-2xl border border-hairline bg-surface/60 p-7 hover:bg-surface transition-all overflow-hidden"
+              className="reveal group relative rounded-2xl border border-hairline bg-surface/60 p-7 hover:bg-surface transition-all overflow-hidden"
             >
               <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-glow/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative">

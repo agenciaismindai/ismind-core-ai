@@ -54,7 +54,7 @@ export function FAQ() {
 
         <div className="mt-10 grid lg:grid-cols-12 gap-12 items-start">
           {/* Left: heading + reassurance */}
-          <div className="lg:col-span-5 lg:sticky lg:top-24">
+          <div className="lg:col-span-5 lg:sticky lg:top-24 reveal">
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter leading-[1.02]">
               Resolvemos{" "}
               <span className="text-glow">tus dudas.</span>
@@ -79,7 +79,7 @@ export function FAQ() {
           </div>
 
           {/* Right: accordion */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7" data-stagger="80">
             <Accordion
               type="single"
               collapsible
@@ -94,7 +94,7 @@ export function FAQ() {
                   <AccordionItem
                     key={id}
                     value={id}
-                    className={`group rounded-2xl border border-hairline bg-surface/40 backdrop-blur-sm border-b transition-colors duration-300 ${
+                    className={`reveal group rounded-2xl border border-hairline bg-surface/40 backdrop-blur-sm border-b transition-colors duration-300 ${
                       isOpen ? "bg-surface/70 border-glow/30" : "hover:bg-surface/60"
                     }`}
                   >

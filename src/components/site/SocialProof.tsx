@@ -59,7 +59,7 @@ export function SocialProof() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionLabel index="08" label="Prueba social" />
 
-        <div className="mt-6 max-w-3xl">
+        <div className="mt-6 max-w-3xl reveal">
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter leading-[1.02]">
             Resultados reales,{" "}
             <span className="text-glow">clientes reales.</span>
@@ -72,11 +72,14 @@ export function SocialProof() {
         </div>
 
         {/* Metrics row */}
-        <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-hairline rounded-2xl border border-hairline overflow-hidden">
+        <div
+          className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-hairline rounded-2xl border border-hairline overflow-hidden"
+          data-stagger="80"
+        >
           {metrics.map((m) => (
             <div
               key={m.l}
-              className="bg-background px-6 py-7 transition-colors hover:bg-surface/60"
+              className="reveal bg-background px-6 py-7 transition-colors hover:bg-surface/60"
             >
               <div className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-glow">
                 {m.v}
@@ -89,12 +92,11 @@ export function SocialProof() {
         </div>
 
         {/* Testimonials */}
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {testimonials.map((t, i) => (
+        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger="140">
+          {testimonials.map((t) => (
             <figure
               key={t.name}
-              className="group relative flex flex-col rounded-2xl border border-hairline bg-surface/40 p-7 backdrop-blur-sm transition-all duration-500 hover:bg-surface/70 hover:border-glow/30 hover:-translate-y-1 hover:shadow-soft animate-float-up"
-              style={{ animationDelay: `${i * 120}ms` }}
+              className="reveal group relative flex flex-col rounded-2xl border border-hairline bg-surface/40 p-7 backdrop-blur-sm transition-all duration-500 hover:bg-surface/70 hover:border-glow/30 hover:-translate-y-1 hover:shadow-soft"
             >
               {/* Quote mark */}
               <svg
