@@ -16,7 +16,7 @@ export function CTA() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Pitch */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left reveal">
             <div className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/60 backdrop-blur px-3 py-1 text-xs text-muted-foreground">
               <span className="h-1.5 w-1.5 rounded-full bg-glow animate-pulse-glow" />
               Listo para desplegar
@@ -29,13 +29,13 @@ export function CTA() {
               Una llamada. Un diagnóstico. Un sistema que opera por ti.
             </p>
 
-            <div className="mt-8 hidden lg:block space-y-3">
+            <div className="mt-8 hidden lg:block space-y-3" data-stagger="100">
               {[
                 "Diagnóstico gratuito de tu operación",
                 "Propuesta personalizada en 48h",
                 "Implementación en menos de 30 días",
               ].map((b) => (
-                <div key={b} className="flex items-center gap-3 text-sm text-muted-foreground">
+                <div key={b} className="reveal flex items-center gap-3 text-sm text-muted-foreground">
                   <div className="h-5 w-5 rounded-full border border-hairline bg-background flex items-center justify-center">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                       <path d="m2 5 2 2 4-5" stroke="var(--glow)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -48,7 +48,7 @@ export function CTA() {
           </div>
 
           {/* Right: Form */}
-          <div>
+          <div className="reveal reveal-scale">
             <ContactForm />
           </div>
         </div>
