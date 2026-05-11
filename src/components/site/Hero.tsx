@@ -1,4 +1,5 @@
 import { useParallax } from "@/hooks/use-parallax";
+import { Hero3DBackground, Hero3DCore } from "./HeroScene3D";
 
 export function Hero() {
   const gridRef = useParallax<HTMLDivElement>(0.4);
@@ -9,9 +10,11 @@ export function Hero() {
       {/* Background grid — parallax */}
       <div
         ref={gridRef}
-        className="parallax absolute inset-0 bg-grid mask-fade-b opacity-60"
+        className="parallax absolute inset-0 bg-dot mask-fade-b opacity-40"
         aria-hidden
       />
+      {/* 3D particle network behind everything */}
+      <Hero3DBackground />
       {/* Radial glow — slower parallax */}
       <div
         ref={glowRef}
@@ -119,7 +122,7 @@ export function Hero() {
         </div>
 
         {/* System mockup */}
-        <SystemPreview />
+        <Hero3DCore />
       </div>
     </section>
   );
