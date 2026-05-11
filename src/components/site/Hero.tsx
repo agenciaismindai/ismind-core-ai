@@ -122,7 +122,7 @@ export function Hero() {
         </div>
 
         {/* System mockup */}
-        <SystemPreview />
+        <Hero3DCore />
       </div>
     </section>
   );
