@@ -1,82 +1,72 @@
 import { SectionLabel } from "./Concept";
-import testimonial1 from "@/assets/testimonial-1.jpg";
-import testimonial2 from "@/assets/testimonial-2.jpg";
-import testimonial3 from "@/assets/testimonial-3.jpg";
 
-const testimonials = [
+const guarantees = [
   {
-    quote:
-      "En 4 meses redujimos un 74% el tiempo dedicado a gestionar citas y mensajes. Hoy atendemos un 38% más de pacientes con el mismo equipo.",
-    name: "Lucía Hernández",
-    role: "Directora General",
-    company: "Clínica Dental Avanza · Madrid",
-    avatar: testimonial1,
+    icon: "⚡",
+    title: "Primeros resultados en 7 días",
+    desc: "El primer automatismo en producción antes de que acabe la primera semana. Sin esperas de meses.",
+    color: "#a78bfa",
   },
   {
-    quote:
-      "Procesamos 3× expedientes con la misma plantilla. El ROI fue positivo al segundo mes. ISMIND.AI no nos vendió un servicio, nos montó infraestructura.",
-    name: "Javier Domínguez",
-    role: "Socio Director",
-    company: "Domínguez & Riera Abogados · Barcelona",
-    avatar: testimonial2,
+    icon: "📊",
+    title: "ROI medible desde el mes 2",
+    desc: "Definimos KPIs contigo antes de empezar. Si no los alcanzamos, iteramos sin coste adicional.",
+    color: "#60a5fa",
   },
   {
-    quote:
-      "Automatizamos onboarding, seguimiento y renovaciones. Subimos retención un 38% y ahorramos 120 horas operativas al mes en 6 centros.",
-    name: "Marta Solé",
-    role: "CEO & Cofundadora",
-    company: "Núa Wellness Group",
-    avatar: testimonial3,
+    icon: "🔒",
+    title: "Sin permanencia",
+    desc: "Sin contratos de 12 meses. Trabajamos por resultados y nos quedamos porque funciona, no por contrato.",
+    color: "#34d399",
+  },
+  {
+    icon: "🛠️",
+    title: "Soporte incluido siempre",
+    desc: "Monitorización continua, ajustes y mejoras evolutivas incluidas. El sistema nunca se queda estancado.",
+    color: "#f472b6",
   },
 ];
 
-const metrics = [
-  { v: "+120", l: "operadores activos" },
-  { v: "+312%", l: "ROI medio en 6 meses" },
-  { v: "−74%", l: "tareas manuales" },
-  { v: "24/7", l: "ejecución continua" },
+const stack = [
+  "OpenAI", "Anthropic", "n8n", "Make", "HubSpot",
+  "WhatsApp API", "Zapier", "Supabase", "Notion", "Google Workspace",
 ];
 
-const logos = [
-  "AVANZA",
-  "DOMÍNGUEZ & RIERA",
-  "NÚA",
-  "MERIDIA",
-  "KAIROS",
-  "NORDIK",
-  "VECTRA",
+const stats = [
+  { v: "−74%", l: "tareas manuales (media sector)" },
+  { v: "2–6 sem", l: "implementación completa" },
+  { v: "24/7", l: "ejecución autónoma" },
+  { v: "mes 2", l: "ROI positivo típico" },
 ];
 
 export function SocialProof() {
   return (
     <section className="relative py-32 border-t border-hairline">
-      {/* subtle ambient glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-glow/40 to-transparent"
       />
 
       <div className="mx-auto max-w-7xl px-6">
-        <SectionLabel index="08" label="Prueba social" />
+        <SectionLabel index="08" label="Garantías" />
 
         <div className="mt-6 max-w-3xl reveal">
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tighter leading-[1.02]">
-            Resultados reales,{" "}
-            <span className="text-glow">clientes reales.</span>
+            Compromisos claros,{" "}
+            <span className="text-glow">resultados medibles.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Más de 120 operadores en España ya escalan con ISMIND.AI. Estos son
-            algunos de los equipos que hoy facturan más con menos esfuerzo
-            operativo.
+            Somos una agencia nueva y lo sabemos. Por eso no prometemos lo que
+            no podemos demostrar — prometemos lo que podemos garantizar.
           </p>
         </div>
 
-        {/* Metrics row */}
+        {/* Stats row */}
         <div
           className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-hairline rounded-2xl border border-hairline overflow-hidden"
           data-stagger="80"
         >
-          {metrics.map((m) => (
+          {stats.map((m) => (
             <div
               key={m.l}
               className="reveal bg-background px-6 py-7 transition-colors hover:bg-surface/60"
@@ -91,67 +81,41 @@ export function SocialProof() {
           ))}
         </div>
 
-        {/* Testimonials */}
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5" data-stagger="140">
-          {testimonials.map((t) => (
-            <figure
-              key={t.name}
-              className="reveal group relative flex flex-col rounded-2xl border border-hairline bg-surface/40 p-7 backdrop-blur-sm transition-all duration-500 hover:bg-surface/70 hover:border-glow/30 hover:-translate-y-1 hover:shadow-soft"
+        {/* Guarantees grid */}
+        <div className="mt-14 grid md:grid-cols-2 gap-5" data-stagger="100">
+          {guarantees.map((g) => (
+            <div
+              key={g.title}
+              className="reveal group relative rounded-2xl border border-hairline bg-surface/40 p-7 backdrop-blur-sm transition-all duration-500 hover:bg-surface/70 hover:border-glow/30 hover:-translate-y-1"
             >
-              {/* Quote mark */}
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="text-glow opacity-80"
-                aria-hidden
+              <div
+                className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-xl mb-5"
+                style={{ background: `${g.color}18` }}
               >
-                <path
-                  d="M7 7h4v4H7c0 3 2 4 4 4v2c-4 0-6-3-6-7V7Zm10 0h4v4h-4c0 3 2 4 4 4v2c-4 0-6-3-6-7V7Z"
-                  fill="currentColor"
-                />
-              </svg>
-
-              <blockquote className="mt-5 text-[15px] leading-relaxed text-foreground/90 flex-1">
-                "{t.quote}"
-              </blockquote>
-
-              <figcaption className="mt-7 flex items-center gap-3 border-t border-hairline pt-5">
-                <img
-                  src={t.avatar}
-                  alt={`Retrato de ${t.name}`}
-                  loading="lazy"
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 rounded-full object-cover ring-1 ring-hairline grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:ring-glow/40"
-                />
-                <div className="min-w-0">
-                  <div className="text-sm font-medium text-foreground truncate">
-                    {t.name}
-                  </div>
-                  <div className="text-xs text-muted-foreground truncate">
-                    {t.role} · {t.company}
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
+                {g.icon}
+              </div>
+              <h3 className="font-display text-lg font-semibold tracking-tight" style={{ color: g.color }}>
+                {g.title}
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                {g.desc}
+              </p>
+            </div>
           ))}
         </div>
 
-        {/* Logo strip */}
+        {/* Tech stack strip */}
         <div className="mt-20">
           <div className="text-center text-xs uppercase tracking-[0.18em] text-muted-foreground/70 font-mono">
-            Operadores que confían en ISMIND.AI
+            Tecnologías con las que trabajamos
           </div>
 
           <div className="relative mt-8 overflow-hidden">
-            {/* edge fade masks */}
             <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
 
             <div className="flex w-max animate-marquee gap-16 py-2">
-              {[...logos, ...logos].map((name, i) => (
+              {[...stack, ...stack].map((name, i) => (
                 <div
                   key={`${name}-${i}`}
                   className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-muted-foreground/50 hover:text-foreground/80 transition-colors whitespace-nowrap"

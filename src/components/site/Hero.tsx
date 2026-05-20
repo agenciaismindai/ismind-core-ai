@@ -103,9 +103,9 @@ export function Hero() {
           >
             <div className="col-span-3 grid grid-cols-3 gap-px bg-hairline rounded-2xl overflow-hidden">
               {[
-                { v: "−74%", l: "tareas manuales", color: "#a78bfa" },
-                { v: "24/7", l: "operación autónoma", color: "#60a5fa" },
-                { v: "3×", l: "capacidad sin contratar", color: "#34d399" },
+                { v: "−74%", l: "tareas manuales (media sector)", color: "#a78bfa" },
+                { v: "24/7", l: "ejecución autónoma", color: "#60a5fa" },
+                { v: "< 6 sem", l: "de 0 a producción", color: "#34d399" },
               ].map((s) => (
                 <div key={s.l} className="bg-background/90 backdrop-blur px-6 py-6 text-left">
                   <div
